@@ -1,0 +1,59 @@
+@import '_colors';
+
+/* ==========================================================================
++ GALLERY
+============================================================================= */
+.gallery {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    overflow: hidden;
+
+    @media screen and (min-width: 451px) and (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+        cursor: grab;
+    }
+
+    @media screen and (max-width: 450px) {
+        grid-template-columns: 1fr;
+        cursor: grab;
+    }
+
+    .photo {
+        img {
+            height: 300px;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid color('silver');
+            object-fit: cover;
+            transition: border .3s;
+
+            &:hover {
+                border-color: color('gold');
+            }
+        }
+    }
+}
+
+/* ==========================================================================
++ IDEAS LIST
+============================================================================= */
+.ideas-list {
+    line-height: 1.4;
+    overflow: auto;
+
+    li {
+        padding: 5px 0;
+        color: color('gray');
+        transition: all .5s;
+
+        &.selected {
+            color: color('gold');
+            font-weight: 700;
+        }
+        &:hover {
+            padding-left: 10px;
+        }
+    }
+}

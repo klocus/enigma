@@ -1,0 +1,49 @@
+@import '_colors';
+
+/* ==========================================================================
++ PROBLEM MAP
+============================================================================= */
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 80px);
+    margin-bottom: 30px;
+
+    .map-overlay {
+        height: 100%;
+        overflow: hidden;
+        border: 1px solid color('silver');
+        cursor: grab;
+        transition: border .3s;
+
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    &:hover .map-overlay {
+        border-color: color('gold');
+    }
+
+    .actions {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+
+        button {
+            height: 30px;
+            width: 30px;
+            padding: 0;
+            margin-left: 10px;
+            background-color: #ffffff;
+            border: 2px solid color('silver');
+            color: color('black');
+            text-align: center;
+            transition: all .3s;
+        }
+        button:hover {
+            border-color: color('gold');
+        }
+    }
+}

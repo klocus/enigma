@@ -1,0 +1,17 @@
+@import '_colors';
+
+.credits {
+    text-align: center;
+    
+    h2 {
+        margin-top: 0;
+        font-weight: 500;
+        font-family: 'Montserrat';
+    }
+
+    p {
+        margin-bottom: 0;
+        margin-top: 45px;
+        color: color('gray');
+    }
+}

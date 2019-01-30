@@ -1,0 +1,167 @@
+@import '_colors';
+
+/* ==========================================================================
++ EMPATHY MAP
+============================================================================= */
+.map {
+    width: 100%;
+    height: 100%;
+
+/* Top
+-------------------------------------------------------------------------- */
+    .top {
+        position: relative;
+        width: 100%;
+        height: calc(70% - 30px);
+
+        .lines {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            svg {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+            line {
+                stroke: color('silver');
+                stroke-width: 1;
+            }
+        }
+
+        div[class^="triangle-"] {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .triangle-down {
+            top: 0;
+            width: 100%;
+            height: 50%;
+
+            span {
+                padding-bottom: 15px;
+            }
+        }
+        .triangle-up {
+            bottom: 0;
+            width: 100%;
+            height: 50%;
+
+            span {
+                padding-top: 15px;
+            }
+        }
+        .triangle-right {
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50%;
+            height: 100%;
+
+            div {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            span {
+                vertical-align: middle;
+                padding-right: 15px;
+            }
+        }
+        .triangle-left {
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50%;
+            height: 100%;
+
+            div {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            span {
+                vertical-align: middle;
+                padding-left: 15px;
+            }
+        }
+
+        div[class^="triangle-"] a {
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            font-size: 18px;
+            line-height: 1.4;
+            color: color('gray');
+
+            span {
+                display: inline-block;
+                font-size: 28px;
+                color: #ffffff;
+                transition: .3s color;
+            }
+            &:hover {
+                color: color('gold');
+
+                span {
+                    color: color('gold');
+                }
+            }
+            strong {
+                text-transform: uppercase;
+            }
+        }
+    }
+
+/* Bottom
+-------------------------------------------------------------------------- */
+    .bottom {
+        height: 30%;
+        text-align: center;
+
+        .left,
+        .right {
+            width: calc(50% - 17px);
+            margin-top: 30px;
+            padding-top: 45px;
+            display: inline-block;
+            border-top: 1px solid color('silver');
+        }
+        .left {
+            margin-right: 15px;
+        }
+        .right {
+            margin-left: 15px;
+        }
+
+        a {
+            color: color('gray');
+            font-size: 18px;
+            line-height: 1.4;
+
+            span {
+                display: inline-block;
+                padding-top: 10px;
+                font-size: 28px;
+                opacity: 0;
+                transition: .3s all;
+            }
+
+            &:hover {
+                color: color('gold');
+            }
+            &:hover span {
+                opacity: 1;
+                color: color('gold');
+            }
+            strong {
+                text-transform: uppercase;
+            }
+        }
+    }
+}
